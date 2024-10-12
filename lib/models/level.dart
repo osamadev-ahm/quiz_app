@@ -19,5 +19,7 @@ class Level {
       required this.image,
       required this.colors,
       required this.route,
-      required this.quizcontroller});
+      required this.quizcontroller,
+
+      });
 }

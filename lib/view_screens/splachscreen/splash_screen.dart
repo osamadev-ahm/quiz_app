@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/app_router/approuter.dart';
 import 'package:quiz/utils/constants/colors.dart';
 
 import '../../widgets/createRoute.dart';
@@ -19,8 +20,9 @@ class _SplachScreenState extends State<SplachScreen> {
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 3)).then((value) {
-      Navigator.of(context).pushAndRemoveUntil(CreateRoute(const HomePage())
-          , (route) => false);
+      // Navigator.of(context).pushAndRemoveUntil(CreateRoute(const HomePage())
+      //     , (route) => false);
+      AppRouter.pushAndRemoveUntil(const HomePage());
 
 
     });

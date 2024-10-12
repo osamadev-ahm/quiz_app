@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/app_router/approuter.dart';
 
 import '../utils/constants/fonts_name.dart';
 import '../widgets/my_outline_btn.dart';
@@ -24,7 +25,8 @@ class QuizHeader extends StatelessWidget {
             iconColor: Colors.white,
             bColor: Colors.white,
             function: () {
-              Navigator.pop(context);
+              // Navigator.pop(context);
+              AppRouter.goBackFromCurrentScreen();
             },
           ),
         ),

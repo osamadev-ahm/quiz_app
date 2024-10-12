@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/app_router/approuter.dart';
 import 'package:quiz/widgets/createRoute.dart';
 import '../../models/level.dart';
 import '../../utils/constants/images_name.dart';
@@ -93,7 +94,9 @@ class LevelDescription extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 12),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, level.route,
+                    // Navigator.pushNamed(context, level.route,
+                    //     arguments: level.quizcontroller);
+                    AppRouter.goTopushNamed(level.route,
                         arguments: level.quizcontroller);
                   },
                   style: ElevatedButton.styleFrom(

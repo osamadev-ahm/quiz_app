@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:quiz/app_router/approuter.dart';
+import 'package:quiz/view_screens/levels/level_describtion.dart';
 import '../app_router/pages_names.dart';
 import '../data_controller/multiple_choices_bank_data.dart';
 import '../data_controller/true_false_bank_data.dart';
@@ -46,8 +48,15 @@ class _HomePageState extends State<HomePage> {
     for (int i = 0; i < levels.length; i++) {
       levelWidgets.add(MyLevelWidget(
           fun: () {
-            Navigator.pushNamed(context, PagesNames.levelDescription,
-                arguments: levels[i]);
+            // Navigator.pushNamed(context, PagesNames.levelDescription,
+            //     arguments: levels[i]);
+            // AppRouter.navKey.currentState?.pushNamed(
+            //   levels[i].route,
+            //   arguments: levels[i].quizcontroller,
+            // );
+            AppRouter.goToScreen(
+              LevelDescription(levels[i]),
+            );
 
           },
           level: levels[i]));

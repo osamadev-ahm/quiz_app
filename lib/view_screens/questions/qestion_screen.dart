@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:quiz/app_router/approuter.dart';
 import '../../data_controller/quiz_controller.dart';
 import '../../utils/constants/images_name.dart';
 import '../../utils/constants/colors.dart';
@@ -72,7 +73,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
         total: scoreKeeper.length,
         onTapRestart: () {
           reset();
-          Navigator.pop(context);
+          // Navigator.pop(context);
+          AppRouter.goBackFromCurrentScreen();
         });
   }
 

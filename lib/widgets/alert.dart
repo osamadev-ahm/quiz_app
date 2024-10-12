@@ -1,8 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:quiz/app_router/approuter.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../app_router/pages_names.dart';
+import '../view_screens/home.dart';
 
 Future showAlert(
     {required BuildContext context,
@@ -40,12 +42,7 @@ Future showAlert(
 }
 
 void popToLevelDescription(BuildContext context) {
-
-  Navigator.pushNamedAndRemoveUntil(
-    context,
-    PagesNames.homePage,
-    (route) => false,
-  );
+  AppRouter.goToScreenWithReplacement(const HomePage());
 
 }
 
