@@ -42,7 +42,7 @@ Future showAlert(
 }
 
 void popToLevelDescription(BuildContext context) {
-  AppRouter.goToScreenWithReplacement(const HomePage());
+  AppRouter.pushAndRemoveUntil(const HomePage());
 
 }
 
